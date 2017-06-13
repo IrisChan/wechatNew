@@ -1,3 +1,3 @@
 import { login } from './loginReducer';
 
-export default login;
+export default { login };
