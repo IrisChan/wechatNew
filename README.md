@@ -2,5 +2,5 @@
 
 Jira profile: 
 https://id.atlassian.com
-User Name: Ying Chen
+User Name: chen18@ualberta.ca
 Password: wMMvbj35**
