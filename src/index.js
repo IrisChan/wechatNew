@@ -10,6 +10,6 @@ import App from './App';
 import './styles/app.css';
 
 render(
-    <App />,
-    document.getElementById('app'),
+	<App />,
+	document.getElementById('app'),
 );
