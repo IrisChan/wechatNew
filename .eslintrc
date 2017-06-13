@@ -12,6 +12,7 @@
 		"react/jsx-indent": [2, "tab"],
 		"no-console": 0,
 		"react/jsx-indent-props": [2, "tab"],
-		"react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}]
+		"react/jsx-filename-extension": [1, {"extensions": [".js", ".jsx"]}],
+		"linebreak-style": 0
 	}
 }
