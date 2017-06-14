@@ -13,7 +13,12 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 exclude: /node_modules/,
-                loader: ['react-hot-loader', 'babel-loader?presets[]=latest,presets[]=react']
+                loader: ['react-hot-loader']
+            },
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                use: [{ loader: 'babel-loader', options: { cacheDirectory: true} }]
             },
             {
                 test: /\.jsx?$/,

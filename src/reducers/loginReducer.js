@@ -1,6 +1,6 @@
 function initialize() {
 	return {
-		text: 'Use Redux',
+		text: 'Use Redux'
 	};
 }
 
