@@ -1,11 +1,20 @@
-function initialize() {
-	return {
-		text: 'Use Redux'
-	};
-}
+import { LOG_IN, LOG_OUT } from '../constants/ActionTypes';
 
-const initialState = initialize();
+const initialState = {
+	isLoggedIn: false,
+	username: '',
+	password: ''
+};
 
 export default function login(state = initialState, action) {
-	return state;
+	switch (action.type) {
+		case LOG_IN:
+			return {
+				isLoggedIn: true,
+				...state
+			};
+		default:
+			return state;
+	}
 }
+

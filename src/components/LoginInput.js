@@ -8,17 +8,13 @@ export default class LoginInput extends Component {
 		onSubmit: PropTypes.func.isRequired
 	};
 
-	constructor() {
-		super();
-		this.state = {
-			username: '', 
-			password: ''
-		};
-		this.onSubmit = this.onSubmit.bind(this);
+	state = {
+		username: this.props.username || '',
+		password: this.props.password || ''
 	}
 
-
-	onSubmit = e => {
+	onSubmit() {
+		const { username, password } = this.state;
 		this.props.onSubmit(username, password);
 	}
 
@@ -28,18 +24,19 @@ export default class LoginInput extends Component {
 				<div>
 					<input
 						type="text"
-						autofocus="true"
 						id="username"
 						value={this.state.username}
 					/>
+					<span />
 					<input
 						type="text"
 						id="password"
 						value={this.state.password}
 					/>
-					<button onClick={this.onSubmit} />
+					<span />
+					<button onClick={this.onSubmit}> Log In</button>
 				</div>
 			</form>
 		);
-	};
+	}
 }
