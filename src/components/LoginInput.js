@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { InputGroup, FormControl, Button } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 
 export default class LoginInput extends Component {
@@ -20,23 +21,27 @@ export default class LoginInput extends Component {
 
 	render() {
 		return (
-			<form onSubmit={this.onSubmit}>
-				<div>
-					<input
-						type="text"
+			<div>
+				<InputGroup>
+					<FormControl
 						id="username"
+						type="text"
+						placeholder="UserID"
+						autoFocus="true"
 						value={this.state.username}
 					/>
-					<span />
-					<input
-						type="text"
+				</InputGroup>
+				<InputGroup>
+					<FormControl
 						id="password"
+						type="text"
+						placeholder="Password"
+						autoFocus="true"
 						value={this.state.password}
 					/>
-					<span />
-					<button onClick={this.onSubmit}> Log In</button>
-				</div>
-			</form>
+				</InputGroup>
+				<Button bsStyle="success">Log In</Button>
+			</div>
 		);
 	}
 }
