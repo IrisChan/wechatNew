@@ -4,15 +4,13 @@
 
 import React from 'react';
 import { render } from 'react-dom';
-import { createStore, combineReducers } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import App from './containers/App';
-import * as reducers from './reducers';
+import reducer from './reducers';
 import './styles/app.css';
 
-const appReducers = combineReducers({ reducers });
-
-const store = createStore(appReducers);
+const store = createStore(reducer);
 
 render(
 	<Provider store={store}>
