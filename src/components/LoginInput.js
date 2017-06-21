@@ -5,6 +5,7 @@ import '../styles/login.css';
 
 export default class LoginInput extends Component {
 	static propTypes = {
+		loginStatus: PropTypes.object.isRequired,
 		actions: PropTypes.object.isRequired
 	};
 
@@ -12,9 +13,7 @@ export default class LoginInput extends Component {
 		super(props);
 		this.state = {
 			username: '',
-			password: '',
-			loginMsg: '',
-			isLoggedIn: false
+			password: ''
 		};
 	}
 
@@ -25,6 +24,7 @@ export default class LoginInput extends Component {
 
 	render() {
 		const { username, password } = this.state;
+		const { loginMsg } = this.props.loginStatus;
 		return (
 			<div className="div-outer">
 				<div className="div-middle">
@@ -61,7 +61,8 @@ export default class LoginInput extends Component {
 							className="button"
 						>Forget Password
 						</Button>
-						<span>{this.state.loginMsg}</span>
+						<p />
+						<span>{loginMsg}</span>
 					</div>
 				</div>
 			</div>

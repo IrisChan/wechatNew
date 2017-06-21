@@ -5,21 +5,19 @@ import { bindActionCreators } from 'redux';
 import * as LoginActions from '../actions';
 import LoginInput from '../components/LoginInput';
 
-const App = ({ actions }) => (
+const App = ({ loginStatus, actions }) => (
 	<div>
-		<LoginInput actions={actions} />
+		<LoginInput loginStatus={loginStatus} actions={actions} />
 	</div>
 );
 
 App.propTypes = {
+	loginStatus: PropTypes.object.isRequired,
 	actions: PropTypes.object.isRequired
 };
 
 const mapStateToProps = state => ({
-	username: state.username,
-	password: state.password,
-	loginMsg: state.loginMsg,
-	isLoggedIn: state.isLoggedIn
+	loginStatus: state.loginStatus
 });
 
 const mapDispatchToProps = dispatch => ({
